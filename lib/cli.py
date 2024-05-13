@@ -1,8 +1,7 @@
 class CLI:
     def __init__(self):
-        self.products = []  # Initialize products list
-        self.inventory = []  # Initialize inventory list
-
+        self.products = []  
+        self.inventory = []  
     def display_main_menu(self):
         print("1. Product Operations")
         print("2. Inventory Operations")
@@ -27,7 +26,7 @@ class CLI:
         id = input("Enter product ID: ")
         name = input("Enter product name: ")
         description = input("Enter product description: ")
-        price = input("Enter product price: ")
+        price = float(input("Enter product price: ")) 
         return id, name, description, price
 
     def create_product(self):
@@ -47,25 +46,13 @@ class CLI:
 
     def display_all_products(self):
         if not self.products:
-           print("There are currently no products in the system.")
-           return
-        print("-" * 50)
-        print(f"| {'Product ID':<15} | {'Product Name':<25} |")
-        print("-" * 50)
-        for product in self.products:
-            print(f"| {product['id']:<15} | {product['name']:<25} |")
-        print("-" * 50)
-
-
-    def display_products(self, products):
-        if not products:
             print("There are currently no products in the system.")
             return
         print("-" * 50)
-        print(f"| {'Product ID':<15} | {'Product Name':<25} |")
+        print(f"| {'Product ID':<15} | {'Product Name':<25} | {'Price':^10} |")  
         print("-" * 50)
-        for product in products:
-            print(f"| {product['id']:<15} | {product['name']:<25} |")
+        for product in self.products:
+            print(f"| {product['id']:<15} | {product['name']:<25} | ${product['price']:.2f} |")  
         print("-" * 50)
 
     def find_product_by_id(self):
