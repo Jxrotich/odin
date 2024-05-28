@@ -27,9 +27,6 @@ It offers a couple of features that easens the management of a business' invento
 ## Usage
 Upon running the application, users will be presented with a menu containing options for product and inventory operations. They can perform various tasks such as adding, deleting, displaying, and finding products or inventory items based on their preferences.
 
-## Snippet
-Below is a snippet of the app.
-![](Bank-of-flatiron.png)
 
 **By Cindy Jerotich**
 
